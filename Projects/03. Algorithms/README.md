@@ -80,6 +80,7 @@ digitsSum = 0
 minDigitsSum = 37
 
 ПОКА a != -1
+	digitsSum = 0
 	ЕСЛИ a - четное:
 		ПОКА a != 0:
 			lastDigit = a % 10
@@ -88,6 +89,8 @@ minDigitsSum = 37
 
 		ЕСЛИ digitsSum < minDigitsSum:
 			minDigitsSum = digitsSum
+
+	Считать -> a
 
 Вывести -> minDigitsSum
 ```
