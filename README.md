@@ -24,6 +24,14 @@
 
 * [04. Java](Projects/04.%20Java)
 
-### 05. Git
+## 05. Git
 
 * [05. Git](Projects/05.%20Git)
+
+## 06. Функции и процедуры
+
+* [06. Functions and Procedures](Projects/06.%20Functions%20and%20Procedures)
+
+## 07. Алгоритмы и оценка сложности
+
+* [07. Algorithms and complexity](Projects/07.%20Algorithms%20and%20complexity)
