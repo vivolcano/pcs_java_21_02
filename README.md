@@ -35,3 +35,7 @@
 ## 07. Алгоритмы и оценка сложности
 
 * [07. Algorithms and complexity](Projects/07.%20Algorithms%20and%20complexity)
+
+## 08. ООП
+
+* [08. OOP](Projects/08.%20OOP)
