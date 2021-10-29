@@ -39,3 +39,7 @@
 ## 08. ООП
 
 * [08. OOP](Projects/08.%20OOP)
+
+## 09. Наследование и полиморфизм
+
+* [09. Inheritance](Projects/09.%20Inheritance)
