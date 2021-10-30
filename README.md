@@ -43,3 +43,7 @@
 ## 09. Наследование и полиморфизм
 
 * [09. Inheritance](Projects/09.%20Inheritance)
+
+## 10. Абстрактные классы и интерфейсы
+
+* [10. Abstract Classes And Interfaces](Projects/10.%20Abstract%20Classes%20And%20Interfaces)
