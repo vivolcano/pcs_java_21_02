@@ -120,7 +120,7 @@ java version
 
 Классы Ellipse и Rectangle должны быть потомками класса Figure.
 
-Класс Square - потомок класса Rectangle, Circle - потомок класса Figure.
+Класс Square - потомок класса Rectangle, Circle - потомок класса Ellipse.
 
 В классе Figure предусмотреть метод getPerimeter(), который возвращает 0. Во всех остальных классах он должен возвращать корректное значение.
 ```
