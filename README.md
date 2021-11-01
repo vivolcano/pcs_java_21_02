@@ -47,3 +47,7 @@
 ## 10. Абстрактные классы и интерфейсы
 
 * [10. Abstract Classes And Interfaces](Projects/10.%20Abstract%20Classes%20And%20Interfaces)
+
+## 11. Статические члены классов
+
+* [11. Static Members](Projects/11.%20Static%20Members)
