@@ -51,3 +51,7 @@
 ## 11. Статические члены классов
 
 * [11. Static Members](Projects/11.%20Static%20Members)
+
+## 12. Внутренние и вложенные классы
+
+* [12. Nested Classes](Projects/12.%20Nested%20Classes)

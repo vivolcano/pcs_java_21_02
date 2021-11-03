@@ -144,3 +144,9 @@ java version
 
 Применить паттерн Singleton для Logger.
 ```
+
+## Homework - 12
+
+```
+Нет задания
+```
