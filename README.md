@@ -55,3 +55,7 @@
 ## 12. Внутренние и вложенные классы
 
 * [12. Nested Classes](Projects/12.%20Nested%20Classes)
+
+## 13. Анонимные классы и лямбда выражения
+
+* [13. Anonymous classes and lambda expressions](Projects/13.%20Anonymous%20classes%20and%20lambda%20expressions)
