@@ -173,3 +173,9 @@ public static int[] filter(int[] array, ByCondition condition) {
 - проверку на четность элемента
 - проверку, является ли сумма цифр элемента четным числом.
 ```
+
+## Homework - 14
+
+```
+Нет задания
+```

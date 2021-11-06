@@ -59,3 +59,7 @@
 ## 13. Анонимные классы и лямбда выражения
 
 * [13. Anonymous classes and lambda expressions](Projects/13.%20Anonymous%20classes%20and%20lambda%20expressions)
+
+## 14. Классы Object и String
+
+* [14. Object and String](Projects/14.%20Object%20and%20String)
