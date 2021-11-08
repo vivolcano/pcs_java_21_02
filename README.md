@@ -63,3 +63,7 @@
 ## 14. Классы Object и String
 
 * [14. Object and String](Projects/14.%20Object%20and%20String)
+
+## 15. Generics
+
+* [15. Generics](Projects/15.%20Generics)
