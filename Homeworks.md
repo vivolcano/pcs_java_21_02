@@ -179,3 +179,9 @@ public static int[] filter(int[] array, ByCondition condition) {
 ```
 Нет задания
 ```
+
+## Homework - 15
+
+```
+Реализовать removeAt(int index) для ArrayList
+```

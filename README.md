@@ -67,3 +67,7 @@
 ## 15. Generics
 
 * [15. Generics](Projects/15.%20Generics)
+
+## 16. Связные списки и списки на основе массива
+
+* [16. ArrayList](Projects/16.%20ArrayList)
