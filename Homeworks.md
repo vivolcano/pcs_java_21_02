@@ -183,6 +183,12 @@ public static int[] filter(int[] array, ByCondition condition) {
 ## Homework - 15
 
 ```
+Нет задания
+```
+
+## Homework - 16
+
+```
 Реализовать removeAt(int index) для ArrayList
 Реализовать метод T get(int index) для LinkedList
 ```
