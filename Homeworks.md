@@ -184,4 +184,5 @@ public static int[] filter(int[] array, ByCondition condition) {
 
 ```
 Реализовать removeAt(int index) для ArrayList
+Реализовать метод T get(int index) для LinkedList
 ```

@@ -71,3 +71,4 @@
 ## 16. Связные списки и списки на основе массива
 
 * [16. ArrayList](Projects/16.%20ArrayList)
+* [17. LinkedList](Projects/17.%20LinkedList)
