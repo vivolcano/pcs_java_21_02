@@ -72,3 +72,7 @@
 
 * [16. ArrayList](Projects/16.%20ArrayList)
 * [17. LinkedList](Projects/17.%20LinkedList)
+
+## 17. Java Collection API
+
+* [18. Java Collection API](Projects/18.%20Java%20Collection%20API)
