@@ -76,3 +76,7 @@
 ## 17. Java Collection API
 
 * [18. Java Collection API](Projects/18.%20Java%20Collection%20API)
+
+## 18. Исключения в Java
+
+* [19. Exceptions](Projects/19.%20Exceptions)
