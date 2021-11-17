@@ -84,3 +84,7 @@
 ## 19. Java IO
 
 * [20. Java IO](Projects/20.%20Java%20IO)
+
+## 20. Stream API
+
+* [21. Stream API](Projects/21.%20Stream%20API)
