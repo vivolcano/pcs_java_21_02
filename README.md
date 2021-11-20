@@ -88,3 +88,7 @@
 ## 20. Stream API
 
 * [21. Stream API](Projects/21.%20Stream%20API)
+
+## 21. Threads
+
+* [22. Threads](Projects/22.%20Threads)
