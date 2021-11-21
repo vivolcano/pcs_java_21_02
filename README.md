@@ -1,6 +1,7 @@
 # Курс "Введение в разработку корпоративных систем на Java"
 
 * [Домашние задания](Homeworks.md)
+* [Аттестации](Attestations.md)
 
 ---
 
@@ -89,6 +90,6 @@
 
 * [21. Stream API](Projects/21.%20Stream%20API)
 
-## 21. Threads
+## 21-22. Threads
 
 * [22. Threads](Projects/22.%20Threads)
