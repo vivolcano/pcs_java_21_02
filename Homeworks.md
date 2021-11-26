@@ -266,3 +266,37 @@ https://habr.com/ru/company/luxoft/blog/270383/
 ```
 Отсутствует
 ```
+
+## Homework - 24
+
+```
+Создать schema.sql файл, который содержит описание таблиц и данных для этих таблиц
+
+Товар
+- id
+- описание
+- стоимость
+- количество
+
+Заказчик
+- id
+- имя/фамилия
+
+Заказ
+- id-товара (внешний ключ)
+- id-заказчика (внешний ключ)
+- дата заказа
+- количество товаров
+
+Написать 3-4 запроса на эти таблицы.
+```
+
+## Homework - 25
+
+```
+Реализовать ProductsRepository
+
+- List<Product> findAll();
+- List<Product> findAllByPrice(double price);
+* List<Product> findAllByOrdersCount(int ordersCount); - найти все товары по количеству заказов, в которых участвуют
+```

@@ -97,3 +97,7 @@
 ## 23. Maven
 
 * [23. Maven Example](Projects/23.%20Maven%20Example)
+
+## 24-25. SQL/JDBC
+
+* [24. SQL & JDBC](Projects/24.%20SQL%20&%20JDBC)
