@@ -300,3 +300,9 @@ https://habr.com/ru/company/luxoft/blog/270383/
 - List<Product> findAllByPrice(double price);
 * List<Product> findAllByOrdersCount(int ordersCount); - найти все товары по количеству заказов, в которых участвуют
 ```
+
+## Homework - 26
+
+```
+Написать модульный тест на int gcd()
+```
