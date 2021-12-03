@@ -2,10 +2,16 @@ package ru.pcs.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import ru.pcs.web.forms.UserForm;
 import ru.pcs.web.models.User;
 import ru.pcs.web.repositories.UsersRepository;
+import ru.pcs.web.services.UsersService;
+
+import java.util.List;
 
 /**
  * 01.12.2021
@@ -16,21 +22,42 @@ import ru.pcs.web.repositories.UsersRepository;
  */
 @Controller
 public class UsersController {
-    // DI
+
+    private final UsersService usersService;
+
     @Autowired
-    private UsersRepository usersRepository;
+    public UsersController(UsersService usersService) {
+        this.usersService = usersService;
+    }
 
+    @GetMapping("/users")
+    public String getUsersPage(Model model) {
+        List<User> users = usersService.getAllUsers();
+        model.addAttribute("users", users);
+        return "users";
+    }
+
+    @GetMapping("/users/{user-id}")
+    public String getUserPage(Model model, @PathVariable("user-id") Long userId) {
+        User user = usersService.getUser(userId);
+        model.addAttribute("user", user);
+        return "user";
+    }
     @PostMapping("/users")
-    public String addUser(@RequestParam("firstName") String firstName,
-                          @RequestParam("lastName") String lastName) {
+    public String addUser(UserForm form) {
+        usersService.addUser(form);
+        return "redirect:/users";
+    }
 
-        User user = User.builder()
-                .firstName(firstName)
-                .lastName(lastName)
-                .build();
+    @PostMapping("/users/{user-id}/delete")
+    public String deleteUser(@PathVariable("user-id") Long userId) {
+        usersService.deleteUser(userId);
+        return "redirect:/users";
+    }
 
-        usersRepository.save(user);
-
-        return "redirect:/users_add.html";
+    @PostMapping("/users/{user-id}/update")
+    public String update(@PathVariable("user-id") Long userId) {
+        // TODO: нужна реализация
+        return "redirect:/users";
     }
 }
