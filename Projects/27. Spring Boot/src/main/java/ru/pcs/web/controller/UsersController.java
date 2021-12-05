@@ -6,7 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.pcs.web.forms.UserForm;
+import ru.pcs.web.models.Car;
 import ru.pcs.web.models.User;
 import ru.pcs.web.repositories.UsersRepository;
 import ru.pcs.web.services.UsersService;
@@ -38,7 +40,7 @@ public class UsersController {
     }
 
     @GetMapping("/users/{user-id}")
-    public String getUserPage(Model model, @PathVariable("user-id") Long userId) {
+    public String getUserPage(Model model, @PathVariable("user-id") Integer userId) {
         User user = usersService.getUser(userId);
         model.addAttribute("user", user);
         return "user";
@@ -50,14 +52,30 @@ public class UsersController {
     }
 
     @PostMapping("/users/{user-id}/delete")
-    public String deleteUser(@PathVariable("user-id") Long userId) {
+    public String deleteUser(@PathVariable("user-id") Integer userId) {
         usersService.deleteUser(userId);
         return "redirect:/users";
     }
 
     @PostMapping("/users/{user-id}/update")
-    public String update(@PathVariable("user-id") Long userId) {
+    public String update(@PathVariable("user-id") Integer userId) {
         // TODO: нужна реализация
         return "redirect:/users";
+    }
+
+    @GetMapping("/users/{user-id}/cars")
+    public String getCarsByUser(Model model, @PathVariable("user-id") Integer userId) {
+        List<Car> cars = usersService.getCarsByUser(userId);
+        List<Car> unusedCars = usersService.getCarsWithoutOwner();
+        model.addAttribute("userId", userId);
+        model.addAttribute("cars", cars);
+        model.addAttribute("unusedCars", unusedCars);
+        return "cars_of_user";
+    }
+
+    @PostMapping("/users/{user-id}/cars")
+    public String addCarToUser(@PathVariable("user-id") Integer userId, @RequestParam("carId") Integer carId) {
+        usersService.addCarToUser(userId, carId);
+        return "redirect:/users/" + userId + "/cars";
     }
 }

@@ -1,22 +1,14 @@
 package ru.pcs.web.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import ru.pcs.web.models.User;
 
-import java.util.List;
-
 /**
- * 15.11.2021
- * 20. Java IO
+ * 05.12.2021
+ * 27. Spring Boot
  *
  * @author Sidikov Marsel (First Software Engineering Platform)
  * @version v1.0
  */
-public interface UsersRepository {
-    List<User> findAll();
-
-    void save(User user);
-
-    void delete(Long userId);
-
-    User findById(Long userId);
+public interface UsersRepository extends JpaRepository<User, Integer> {
 }

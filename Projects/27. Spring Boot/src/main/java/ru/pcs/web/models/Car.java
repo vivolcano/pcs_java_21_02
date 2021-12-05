@@ -6,11 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
- * 15.11.2021
- * 20. Java IO
+ * 05.12.2021
+ * 27. Spring Boot
  *
  * @author Sidikov Marsel (First Software Engineering Platform)
  * @version v1.0
@@ -20,19 +19,17 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "account")
-public class User {
+public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String firstName;
-    private String lastName;
+    private String model;
 
-    @Column(columnDefinition = "integer not null default 0")
-    private Integer age;
+    private String color;
 
-    @OneToMany(mappedBy = "owner")
-    private List<Car> cars;
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private User owner;
 }

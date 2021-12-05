@@ -1,9 +1,12 @@
 package ru.pcs.web.services;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.pcs.web.forms.UserForm;
+import ru.pcs.web.models.Car;
 import ru.pcs.web.models.User;
+import ru.pcs.web.repositories.CarsRepository;
 import ru.pcs.web.repositories.UsersRepository;
 
 import java.util.List;
@@ -15,21 +18,25 @@ import java.util.List;
  * @author Sidikov Marsel (First Software Engineering Platform)
  * @version v1.0
  */
+@RequiredArgsConstructor
 @Component
 public class UsersServiceImpl implements UsersService {
 
     private final UsersRepository usersRepository;
+    private final CarsRepository carsRepository;
 
-    @Autowired
-    public UsersServiceImpl(UsersRepository usersRepository) {
-        this.usersRepository = usersRepository;
-    }
+//    @Autowired
+//    public UsersServiceImpl(UsersRepository usersRepository, CarsRepository carsRepository) {
+//        this.usersRepository = usersRepository;
+//        this.carsRepository = carsRepository;
+//    }
 
     @Override
     public void addUser(UserForm form) {
         User user = User.builder()
                 .firstName(form.getFirstName())
                 .lastName(form.getLastName())
+                .age(1)
                 .build();
 
         usersRepository.save(user);
@@ -41,12 +48,30 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public void deleteUser(Long userId) {
-        usersRepository.delete(userId);
+    public void deleteUser(Integer userId) {
+        usersRepository.deleteById(userId);
     }
 
     @Override
-    public User getUser(Long userId) {
-        return usersRepository.findById(userId);
+    public User getUser(Integer userId) {
+        return usersRepository.getById(userId);
+    }
+
+    @Override
+    public List<Car> getCarsByUser(Integer userId) {
+        return carsRepository.findAllByOwner_Id(userId);
+    }
+
+    @Override
+    public List<Car> getCarsWithoutOwner() {
+        return carsRepository.findAllByOwnerIsNull();
+    }
+
+    @Override
+    public void addCarToUser(Integer userId, Integer carId) {
+        User user = usersRepository.getById(userId);
+        Car car = carsRepository.getById(carId);
+        car.setOwner(user);
+        carsRepository.save(car);
     }
 }
