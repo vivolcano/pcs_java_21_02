@@ -1,4 +1,5 @@
 <!doctype html>
+<#import "spring.ftl" as spring/>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,21 +11,21 @@
 <body>
 <h1>Добавление пользователя</h1>
 <form method="post" action="/users">
-    <label>Имя:
-        <input name="firstName" placeholder="Имя">
+    <label><@spring.message 'users.form.input.firstName'/>:
+        <input name="firstName" placeholder="<@spring.message 'users.form.input.firstName'/>">
     </label>
-    <label>Фамилия:
-        <input name="lastName" placeholder="Фамилия">
+    <label><@spring.message 'users.form.input.lastName'/>
+        <input name="lastName" placeholder="<@spring.message 'users.form.input.lastName'/>">
     </label>
-    <input type="submit" value="Добавить">
+    <input type="submit" value="<@spring.message 'users.form.input.submit'/>">
 </form>
 <table>
     <tr>
         <th>ID</th>
-        <th>Имя</th>
-        <th>Фамилия</th>
-        <th>Возраст</th>
-        <th>Действия</th>
+        <th><@spring.message 'users.table.header.firstName'/></th>
+        <th><@spring.message 'users.table.header.lastName'/></th>
+        <th><@spring.message 'users.table.header.age'/></th>
+        <th><@spring.message 'users.table.header.action'/></th>
     </tr>
     <#list users as user>
         <tr>

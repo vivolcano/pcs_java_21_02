@@ -1,6 +1,9 @@
 package ru.pcs.web.forms;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotEmpty;
 
 /**
  * 03.12.2021
@@ -11,6 +14,10 @@ import lombok.Data;
  */
 @Data
 public class UserForm {
+    @NotEmpty
+    @Length(max = 10)
     private String firstName;
+    @NotEmpty
+    @Length(max = 10)
     private String lastName;
 }

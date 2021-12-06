@@ -13,6 +13,7 @@ import ru.pcs.web.models.User;
 import ru.pcs.web.repositories.UsersRepository;
 import ru.pcs.web.services.UsersService;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -46,7 +47,7 @@ public class UsersController {
         return "user";
     }
     @PostMapping("/users")
-    public String addUser(UserForm form) {
+    public String addUser(@Valid UserForm form) {
         usersService.addUser(form);
         return "redirect:/users";
     }
