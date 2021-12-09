@@ -59,8 +59,8 @@ public class UsersController {
     }
 
     @PostMapping("/users/{user-id}/update")
-    public String update(@PathVariable("user-id") Integer userId) {
-        // TODO: нужна реализация
+    public String update(@PathVariable("user-id") Integer userId, UserForm userForm) {
+        usersService.update(userId, userForm);
         return "redirect:/users";
     }
 

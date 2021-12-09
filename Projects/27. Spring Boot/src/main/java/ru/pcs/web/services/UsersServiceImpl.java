@@ -36,7 +36,6 @@ public class UsersServiceImpl implements UsersService {
         User user = User.builder()
                 .firstName(form.getFirstName())
                 .lastName(form.getLastName())
-                .age(1)
                 .build();
 
         usersRepository.save(user);
@@ -73,5 +72,13 @@ public class UsersServiceImpl implements UsersService {
         Car car = carsRepository.getById(carId);
         car.setOwner(user);
         carsRepository.save(car);
+    }
+
+    @Override
+    public void update(Integer userId, UserForm userForm) {
+        User user = usersRepository.getById(userId);
+        user.setFirstName(userForm.getFirstName());
+        user.setLastName(userForm.getLastName());
+        usersRepository.save(user);
     }
 }

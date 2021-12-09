@@ -10,7 +10,6 @@
 <body>
 <h3>Имя - ${user.firstName}</h3>
 <h3>Фамилия - ${user.lastName}</h3>
-<h3>Возраст - ${user.age}</h3>
 <br>
 <form method="post" action="/users/${user.id}/update">
     <label>
@@ -18,9 +17,6 @@
     </label>
     <label>
         Фамилия: <input name="lastName" value="${user.lastName}">
-    </label>
-    <label>
-        Возраст: <input name="age" value="${user.age}">
     </label>
     <input type="submit" value="Сохранить..">
 </form>

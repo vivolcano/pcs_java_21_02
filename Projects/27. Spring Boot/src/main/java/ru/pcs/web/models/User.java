@@ -23,6 +23,13 @@ import java.util.List;
 @Table(name = "account")
 public class User {
 
+    public enum Role {
+        ADMIN, USER
+    }
+
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -30,8 +37,12 @@ public class User {
     private String firstName;
     private String lastName;
 
-    @Column(columnDefinition = "integer not null default 0")
-    private Integer age;
+    @Column(unique = true)
+    private String email;
+
+    private String hashPassword;
+
+
 
     @OneToMany(mappedBy = "owner")
     private List<Car> cars;

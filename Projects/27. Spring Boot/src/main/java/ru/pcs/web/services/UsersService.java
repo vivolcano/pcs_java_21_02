@@ -26,4 +26,6 @@ public interface UsersService {
     List<Car> getCarsWithoutOwner();
 
     void addCarToUser(Integer userId, Integer carId);
+
+    void update(Integer userId, UserForm userForm);
 }

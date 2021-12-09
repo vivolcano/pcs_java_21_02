@@ -24,7 +24,6 @@
         <th>ID</th>
         <th><@spring.message 'users.table.header.firstName'/></th>
         <th><@spring.message 'users.table.header.lastName'/></th>
-        <th><@spring.message 'users.table.header.age'/></th>
         <th><@spring.message 'users.table.header.action'/></th>
     </tr>
     <#list users as user>
@@ -32,7 +31,6 @@
             <td>${user.id}</td>
             <td>${user.firstName}</td>
             <td>${user.lastName}</td>
-            <td>${user.age}</td>
             <td>
                 <form method="post" action="/users/${user.id}/delete">
                     <input type="submit" value="Удалить">
