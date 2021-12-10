@@ -3,6 +3,7 @@ package ru.pcs.web.services;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.pcs.web.exceptions.UserNotFoundException;
 import ru.pcs.web.forms.UserForm;
 import ru.pcs.web.models.Car;
 import ru.pcs.web.models.User;
@@ -10,6 +11,7 @@ import ru.pcs.web.repositories.CarsRepository;
 import ru.pcs.web.repositories.UsersRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 03.12.2021
@@ -53,7 +55,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public User getUser(Integer userId) {
-        return usersRepository.getById(userId);
+        return usersRepository.findById(userId).orElseThrow(UserNotFoundException::new);
     }
 
     @Override

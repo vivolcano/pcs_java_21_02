@@ -19,6 +19,9 @@
     </label>
     <input type="submit" value="<@spring.message 'users.form.input.submit'/>">
 </form>
+<#if errors??>
+    <h1 style="color: red">${errors}</h1>
+</#if>
 <table>
     <tr>
         <th>ID</th>

@@ -15,7 +15,7 @@
     <label>Пароль:
         <input type="password" name="password" placeholder="Введите пароль...">
     </label>
-    <input type="submit" value="Регистрация">
+    <input type="submit" value="Вход">
 </form>
 </body>
 </html>
