@@ -8,6 +8,7 @@
     <title>Регистрация</title>
 </head>
 <body>
+<img src="/files/38802e6a-2590-4c74-a492-154add1bdfeb.jpg">
 <form method="post" action="/signIn">
     <label>Email:
         <input type="email" name="email" placeholder="Введите email...">

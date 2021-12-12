@@ -2,6 +2,7 @@ package ru.pcs.web.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -37,6 +38,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/users").authenticated()
                 .antMatchers("/users/**").hasAuthority("ADMIN")
                 .antMatchers("/signUp").permitAll()
+                .antMatchers("/files/upload/**").authenticated()
+                .antMatchers(HttpMethod.GET, "/files/**").permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/signIn")
